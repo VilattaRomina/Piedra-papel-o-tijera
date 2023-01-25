@@ -105,15 +105,13 @@ main{
 }
 
 .arma{
-    font-size: 3rem;
     background-color: inherit;
     border: 0;
     cursor: pointer;
 }
 
 img{
-   width: 50%;
-   height: 80%;
+   width: 250px;
    filter: invert(.6);
    
 }

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --first-color:#160e38;
+    --second-color:#dc8ec1;
+    --text-color:#ffff;
+    --extra-color:rgb(189, 186, 186);
+}
+
+body{
+    background-color: var(--first-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--extra-color);
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.instrucciones{
+    margin-bottom: 2rem;
+}
+
+.marcador{
+    background-color: var(--second-color);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--first-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    
+}
+
+.marcador .nombre{
+    position: absolute;
+    color: var(--text-color);
+    background-color: var(--first-color);
+    line-height: 1;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid var(--second-color);
+
+   
+}
+
+.marcador .nombre-jugador{
+ right: 87%;
+ 
+}
+
+.marcador .nombre-computadora{
+    left: 87%;
+    
+}
+
+.marcador .puntos {
+    font-size: 1.5rem;
+}
+
+.elegir-arma{
+    margin-bottom: 2rem;
+}
+
+.elegir-arma h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.armas{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    
+}
+
+.arma{
+    font-size: 3rem;
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+img{
+   width: 50%;
+   height: 80%;
+   filter: invert(.6);
+   
+}
+
+.mensaje{
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+.mensaje .eleccion{
+    font-size: 1.7rem;
+    color: var(--second-color); 
+}
+
+.btn{
+    border: 0;
+    line-height: 1;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-size: 1.2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.disabled{
+    display: none;
+}
+
+.container-particulas{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.particulas{
+    position:relative;
+    display: flex;
+}
+
+.particulas span{
+    position: relative;
+    width: 10px;
+    height:10px ;
+    background: #4fc3df;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 
+       0 0 50px #4fc3dc,   
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration:calc(130s / var(--i)) ;
+    
+}
+
+.particulas span:nth-child(even){
+    background: #df4fa5;
+    box-shadow: 0 0 0 10px #d772c444, 
+    0 0 50px #df4fa5,   
+     0 0 100px #df4fa5;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);     
+}
+
+    100%{
+        transform: translateY(10vh) scale(1);
+        
+}
+}

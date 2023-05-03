@@ -142,46 +142,44 @@ img{
     display: none;
 }
 
-.container-particulas{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-
-}
-
-.particulas{
-    position:relative;
-    display: flex;
-}
-
-.particulas span{
-    position: relative;
-    width:2px;
-    height:2px ;
-    background: #4fc3df;
-    margin: 0 8px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px #4fc3dc44,        0 0 25px #4fc3dc,           0 0 50px #4fc3dc;
-    animation: animate 15s linear infinite;
-    animation-duration:calc(130s / var(--i)) ;
-   
-}
-
-.particulas span:nth-child(even){
-    background: #df4fa5;
-    box-shadow: 0 0 0 5px #d772c444, 
-    0 0 25px #df4fa5,   
-     0 0 50px #df4fa5;
-}
-
-@keyframes animate{
-    0%{
-        transform: translateY(100vh) scale(0);     
-}
-
-    100%{
-        transform: translateY(10vh) scale(1);
+@media (max-width:870px) {
+    .armas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:1rem;
         
-}
+    }
+
+    header{
+
+        font-size: 0.8rem;
+        
+    }
+
+    .instrucciones{
+        font-size: 0.8rem;
+    }
+
+    .marcador{
+        
+        font-size: 0.8rem;
+        
+    }
+
+    .marcador .puntos {
+        font-size: 0.8rem;
+    }
+
+
+    .elegir-arma h2 {
+        font-size: 0.8rem;
+        
+    }
+
+    img{
+        width: 160px;
+        
+        
+     }
 }
